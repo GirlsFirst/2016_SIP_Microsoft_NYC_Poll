@@ -1,0 +1,20 @@
+/*css for final project home page*/
+.navbar-nav > li > a, .navbar-brand {
+	padding-top: 4px !important;
+	padding-bottom: 20 !important;
+	height: 80px;
+}
+
+.nav a{
+	color
+	: white !important;
+	font-size: 1.4em !important;
+}
+
+<hr> {
+	color: white;
+}
+	
+.navbar-brand {
+	color: white !important;
+}

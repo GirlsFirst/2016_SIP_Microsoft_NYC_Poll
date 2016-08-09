@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset = "utf-8">
+  <meta name = "viewport" content = "width-device-width, initial-scale = 1">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+    #map{
+      width: 100%;
+      height: 400px;
+    }
+  </style>
+
+  </head>
+  <body>
+  <div class = "container">
+
+<!--  nav bar -->
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Poll Me</a>
+    </div>
+
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="map.html">Map</a></li>
+            <li><a href="howto.html">How-To</a></li>
+            <li><a href="settings.html">Settings </a></li>
+          </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+
+<hr style="height: 30px">
+
+  <div id="map"></div>
+
+    <script>
+    
+
+    var polldata;
+
+    // this is where loop begins
+
+    var markers=[];
+
+    var map;
+
+    function polls(){
+      for (var i=0; i<1200; i++){
+        var latitude = polldata.data[i][19][1];
+        var longitude = polldata.data[i][19][2];
+        var marker = new google.maps.Marker({
+          position: {lat: parseFloat(latitude), lng:parseFloat(longitude)}
+        });
+
+        markers.push(marker);
+      }
+      var len = markers.length
+      for (var m=0; m<len; m++ ){
+        markers[m].setMap(map);
+      }
+    }
+
+    function initMap(){
+    
+      var mapDiv = document.getElementById('map');
+      map = new google.maps.Map(mapDiv, {
+        zoom: 14,
+        center: {lat: 40.7128, lng: -74.0059}
+      });
+
+      $.getJSON('pollingdata.json', function(data){
+        polldata = data;
+        polls();
+      });
+
+      
+    }
+
+    </script>
+  </div>
+
+    <script
+    async defer
+    src ="https://maps.googleapis.com/maps/api/js?&callback=initMap">
+    </script>
+
+
+  </body>
+<html>
+  
+  

@@ -1,1 +1,13 @@
 /*css for how to */
+.nav a{	
+	color
+	: white !important;
+	font-size: 1.4em !important;
+}
+.navbar-brand {
+	color: white !important;
+}
+
+#spacing {
+	margin-top: 30px !important;
+}

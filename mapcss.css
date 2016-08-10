@@ -1,1 +1,9 @@
 /*css for map page */
+.nav a{	
+	color: white !important;
+	font-size: 1.4em !important;
+}
+.navbar-brand {
+	color: white !important;
+}
+

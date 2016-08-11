@@ -22,25 +22,9 @@
   margin-right: auto !important;
 }
 
-.purpose{
-	color: white;
-	background-color: #222222;
-	border-style: solid;
-    border-bottom-color: #D4D2D5;
-}
 
-/*
-#imagewithcaption img{
-float: left;
-margin-right: 15px;
-margin-top: 5px;
-margin-bottom: 10px;
-margin-left: 5px;  These margin defintions ensure that the Text does not seat too close to image 
-border: 1px solid black;
-padding: 3px;
-}
 
-}*/
+
 
 .imgContainer{
     float:left;
@@ -55,6 +39,21 @@ padding: 3px;
 	padding-right: 50px;
 }
 
-#image4{
 
+#purpose {
+clear: left;
+/*border-style:solid;
+border-color: #3F48CC;*/
+padding-top: 20px;
+/*background-color: #8aabff;
+*/
+} 
+
+#header{
+	font-size: 40px;
+	text-align: center;
+}
+
+#text {
+	text-align: justify;
 }

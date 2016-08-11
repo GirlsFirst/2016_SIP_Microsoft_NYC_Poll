@@ -70,22 +70,37 @@
 
     var map;
 
-    function polls(){
-      for (var i=0; i<1200; i++){
+function polls(){
+      for (var i=0; i<1201; i++){
         var latitude = polldata.data[i][19][1];
         var longitude = polldata.data[i][19][2];
         var marked = new google.maps.Marker({
-          position: {lat: parseFloat(latitude), lng:parseFloat(longitude)}
+          position: {lat: parseFloat(latitude), lng:parseFloat(longitude)},
+          map:map
         });
+
+        var infowindow = new google.maps.InfoWindow({
+        content: contentString
+        });
+
+        var contentString = polldata.data[i][17];
+
+        google.maps.event.addListener (marked, 'click', getInfoCallback(map, contentString));
 
         markers.push(marked);
       }
-      var len = markers.length
-      for (var m=0; m<len; m++ ){
-        markers[m].setMap(map);
-      }
     }
 
+    function getInfoCallback(map,content){
+    var infowindow = new google.maps.InfoWindow({
+      content: content
+    });
+    return function (){
+      infowindow.setContent(content);
+      infowindow.open(map, this);
+    };
+  }
+  
     function initMap(){
     
       var mapDiv = document.getElementById('map');

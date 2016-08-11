@@ -11,3 +11,68 @@
 #spacing {
 	margin-top: 30px !important;
 }
+
+#necessary {
+	color: white;
+}
+
+#necessary p{
+	padding-left: 30px;
+	font-size: 25px;
+	background-color: #222222;
+	margin-top: -40px;
+	padding-top: 25px;
+	text-decoration: underline;
+}
+
+
+#necessaryinfo p{
+	background-color: #222222;
+	font-size: 15px;
+	margin-top: -10px;
+	padding-left: 30px;
+	color: white;
+}
+
+#necessarylist {
+	background-color: #222222;
+	font-size: 15px;
+	margin-top: -10px;
+	padding-left: 35px;
+	color: white;
+	padding-bottom: 100px;
+}
+
+#asterik p{
+	background-color: #222222;
+	font-size: 10px;
+	margin-top: -10px;
+	padding-left: 40px;
+	color: white;
+}
+
+#infobox {
+	width: 400px;
+	float: right;
+	margin-left: 10px;
+	background: #222222;
+	margin-top: -140px;
+	border-color: #E74C3C;
+	border-style: dashed;
+	margin-right: 10px;
+}
+
+#infobox #tips {
+	width: 400px;
+	margin: 7px 10px;
+}
+
+#infobox #tips ul{
+	list-style-type: none;
+    padding: 0px;
+    margin: 3px 0px 10px 0px;
+}
+
+#infobox #tips li{
+	color: white;
+}

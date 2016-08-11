@@ -52,9 +52,10 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 
+<br>
     <div id="floating-panel">
       <input id="address" type="textbox" value="New York">
-      <input id="submit" type="button" value="Geocode">
+      <input id="submit" type="button" value="Find voting locations near me!">
     </div>
 
   <div id="map">
@@ -80,10 +81,22 @@ function polls(){
         });
 
         var infowindow = new google.maps.InfoWindow({
-        content: contentString
+        content: contentString,
+
         });
 
-        var contentString = polldata.data[i][17];
+        var contentString = 
+        '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h3>' + polldata.data[i][10] +'</h3>'+
+        '<div id="bodyContent">'+
+        '<p> Voter Entrance: ' + polldata.data[i][17] + ' ' +polldata.data[i][15] + ' ' + polldata.data[i][16] + '</p>' +
+        '<p> Handicap Entrance: ' + polldata.data[i][18] + ' ' +polldata.data[i][15] + ' ' + polldata.data[i][16] + '</p>'
+      '</div>'+
+      '</div>';
+
+
 
         google.maps.event.addListener (marked, 'click', getInfoCallback(map, contentString));
 
@@ -93,7 +106,8 @@ function polls(){
 
     function getInfoCallback(map,content){
     var infowindow = new google.maps.InfoWindow({
-      content: content
+      content: content,
+      maxWidth: 150,
     });
     return function (){
       infowindow.setContent(content);

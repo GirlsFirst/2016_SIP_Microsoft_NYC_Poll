@@ -91,10 +91,127 @@
 </div>
 </div>
 
+
+
 <!-- regular and absentee ballot tabs-->
-<ul class="nav nav-tabs nav-justified">
-  
-</ul>
+
+<div id="tabs-container">
+    <ul class="tabs-menu" id="tabs">
+        <li class="current"><a href="#tab-1">In-State Voting</a></li>
+        <li><a href="#tab-2">Absentee Ballot</a></li>
+    </ul>
+    <div class="tab">
+        <div id="tab-1" class="tab-content">
+            <p>
+
+
+
+              [in state voting info]</p>
+        </div>
+        <div id="tab-2" class="tab-content">
+            <p>[absentee ballot info] </p>
+        
+        </div>
+    </div>
+</div>
+
+<!-- javascript for tabs -->
+<script>
+$(document).ready(function() {
+    $(".tabs-menu a").click(function(event) {
+        event.preventDefault();
+        $(this).parent().addClass("current");
+        $(this).parent().siblings().removeClass("current");
+        var tab = $(this).attr("href");
+        $(".tab-content").not(tab).css("display", "none");
+        $(tab).fadeIn();
+    });
+});
+</script>
+
+<!--  end javascript for tabs
+begin ballot code -->
+<div id= "dropdown-info">
+  <h3>Search for your state's ballot</h3>
+  <p> Getting to know your ballot before voting is crucial to the voting process. Get an example of your state's ballot by choosing your state from the drop down menu below. </p>
+</div>
+
+<div class="dropdown">
+  <button onclick="dropMe()" class="drop">Find your state</button>
+    <div id="findstate" class= "choose">
+      <input type="text" / placeholder= "Search.." id="userInput"
+      onkeyup="filterMe()">
+        <a href="#">Alabama</a>
+        <a href="#">Alaska</a>
+        <a href="#">Arizona</a>
+        <a href="#">Arkansas</a>
+        <a href="#">California</a>
+        <!-- a href="#">Colorado</a>
+        <a href="#">Connecticut</a>
+        <a href="#">Delaware</a>
+        <a href="#">Florida</a>
+        <a href="#">Georgia</a>
+        <a href="#">Hawaii</a>
+        <a href="#">Idaho</a>
+        <a href="#">Illinois</a>
+        <a href="#">Indiana</a>
+        <a href="#">Iowa</a>
+        <a href="#">Kansas</a>
+        <a href="#">Kentucky</a>
+        <a href="#">Louisiana</a>
+        <a href="#">Maine</a>
+        <a href="#">Maryland</a>
+        <a href="#">Massachusetts</a>
+        <a href="#">Michigan</a>
+        <a href="#">Minnesota</a>
+        <a href="#">Mississippi</a>
+        <a href="#">Missouri</a>
+        <a href="#">Montana</a>
+        <a href="#">Nebraska</a>
+        <a href="#">Nevada</a>
+        <a href="#">New Hampshire</a>
+        <a href="#">New Jersey</a>
+        <a href="#">New Mexico</a>
+        <a href="#">New York</a>
+        <a href="#">North Carolina</a>
+        <a href="#">North Dakota</a>
+        <a href="#">Ohio</a>
+        <a href="#">Oklahoma</a>
+        <a href="#">Oregon</a>
+        <a href="#">Pennsylvania</a>
+        <a href="#">Rhode Island</a>
+        <a href="#">South Carolina</a>
+        <a href="#">South Dakota</a>
+        <a href="#">Tennessee</a>
+        <a href="#">Texas</a>
+        <a href="#">Utah</a>
+        <a href="#">Vermont</a>
+        <a href="#">Virginia</a>
+        <a href="#">Washington</a>
+        <a href="#">West Virginia</a>
+        <a href="#">Wisconsin</a>
+        <a href="#">Wyoming</a> -->
+      </div>
+    </div>
+<script>
+function dropMe(){
+  documenht.getElementById("findstate").classList.toggle("show");
+}
+
+function filterMe(){
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("userInput");
+  filter= input.value.toUpperCase();
+  div = document.getElementById("findstate");
+    a = div.getElementsByTagName('a');
+    for (i = 0; i < a.length; i++) {
+        if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = '';
+        } else {
+            a[i].style.display = 'none';
+        }
+    }
+}
 
 
 

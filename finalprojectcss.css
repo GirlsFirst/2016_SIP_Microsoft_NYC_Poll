@@ -15,15 +15,11 @@
 	color: white !important;
 }
 
-#myCarousel {
-	margin-top: 30px !important;
-}
 
-.stats{
-	color: white;
-	background-color: #222222;
-	/*border-style: solid;
-    border-bottom-color: #D4D2D5;*/
+
+
+#container{
+  margin-right: auto !important;
 }
 
 .purpose{
@@ -33,3 +29,32 @@
     border-bottom-color: #D4D2D5;
 }
 
+/*
+#imagewithcaption img{
+float: left;
+margin-right: 15px;
+margin-top: 5px;
+margin-bottom: 10px;
+margin-left: 5px;  These margin defintions ensure that the Text does not seat too close to image 
+border: 1px solid black;
+padding: 3px;
+}
+
+}*/
+
+.imgContainer{
+    float:left;
+}
+
+#image1 {
+	padding-left: 100px;
+	padding-right: 50px;
+}
+
+#image2{
+	padding-right: 50px;
+}
+
+#image4{
+
+}

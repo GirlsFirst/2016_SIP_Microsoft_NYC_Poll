@@ -137,16 +137,15 @@ begin ballot code -->
 </div>
 
 <div class="dropdown">
-  <button onclick="dropMe()" class="drop">Find your state</button>
-    <div id="findstate" class= "choose">
-      <input type="text" / placeholder= "Search.." id="userInput"
-      onkeyup="filterMe()">
-        <a href="#">Alabama</a>
+<button onclick="dropDown()" class="drop">Find your state</button>
+  <div id="findMe" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="userInput" onkeyup="filterFunction()">
+       <!--  <a href="#">Alabama</a>
         <a href="#">Alaska</a>
         <a href="#">Arizona</a>
         <a href="#">Arkansas</a>
         <a href="#">California</a>
-        <!-- a href="#">Colorado</a>
+        <a href="#">Colorado</a>
         <a href="#">Connecticut</a>
         <a href="#">Delaware</a>
         <a href="#">Florida</a>
@@ -169,11 +168,11 @@ begin ballot code -->
         <a href="#">Montana</a>
         <a href="#">Nebraska</a>
         <a href="#">Nevada</a>
-        <a href="#">New Hampshire</a>
-        <a href="#">New Jersey</a>
-        <a href="#">New Mexico</a>
-        <a href="#">New York</a>
-        <a href="#">North Carolina</a>
+        <a href="#">New Hampshire</a> -->
+        <a href="#" onclick="setStyle(this)">New Jersey</a>
+       <!--  <a href="#">New Mexico</a> -->
+        <a href="#" onclick="setStyle(this)">New York</a>
+        <!-- <a href="#">North Carolina</a>
         <a href="#">North Dakota</a>
         <a href="#">Ohio</a>
         <a href="#">Oklahoma</a>
@@ -189,32 +188,63 @@ begin ballot code -->
         <a href="#">Virginia</a>
         <a href="#">Washington</a>
         <a href="#">West Virginia</a>
-        <a href="#">Wisconsin</a>
+        <a href="#">Wisconsin</a> 
         <a href="#">Wyoming</a> -->
       </div>
+
     </div>
+  <!-- images -->
+  <div id= "images">
+  </div>
+
+
 <script>
-function dropMe(){
-  documenht.getElementById("findstate").classList.toggle("show");
+function dropDown() {
+    document.getElementById("findMe").classList.toggle("show");
 }
 
-function filterMe(){
-  var input, filter, ul, li, a, i;
-  input = document.getElementById("userInput");
-  filter= input.value.toUpperCase();
-  div = document.getElementById("findstate");
-    a = div.getElementsByTagName('a');
+function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("userInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("findMe");
+    a = div.getElementsByTagName("a");
     for (i = 0; i < a.length; i++) {
         if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
-            a[i].style.display = '';
+            a[i].style.display = "";
         } else {
-            a[i].style.display = 'none';
+            a[i].style.display = "none";
         }
     }
 }
 
+// function setStyle(){
+//   document.getElementById("newYork").style.display="block";
 
+// }
 
+function setStyle(state){
+  document.getElementById("images").innerHTML = ""
+  var show= document.createElement("IMG");
+  console.log(state.innerHTML);
+  var filename;
+  switch(state.innerHTML){
+    case "New York":
+      // do something
+      filename= "million.png";
+      break;
+    case "New Jersey":
+      filename= "seventeenpercent.png";
+      break;
+    default:
+      filename= "hi";
+      // do something
+  }
+  show.src= filename;
+  document.getElementById("images").appendChild(show);
+
+}
+</script>
 
 	</body>
 <html>

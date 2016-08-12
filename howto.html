@@ -102,19 +102,32 @@
     </ul>
     <div class="tab">
         <div id="tab-1" class="tab-content">
-            <p>
-
-
-
-              [in state voting info]</p>
+            <ul>
+              <li>You have to be a resident of the United States. </li>
+              <li> You can not be in jail or in probation. </li>
+              <li> If you just moved in, you can always check online to see how long you have to wait in order for you to vote. e.g: You have to be a New York resident for at least 30 days in order for you to vote. </li>
+              <li>You have to be 18 years old before the next election. </li>
+            <ul>
         </div>
         <div id="tab-2" class="tab-content">
-            <p>[absentee ballot info] </p>
+           <p> What do I need to register to vote as an absentee?</p>
+           <ul>
+            <li> Have some sort picture identification. Some states aren’t strict so they’ll accept an I.D without your picture.
+             (Recommended: bring an I.D with your picture for safe measures) </li>
+            <li>You will need to use your first and last name!</li>
+            <li>Include where you are living as of now. </li>
+            <li>If you are a college student you are able to register to vote from where you feel most comfortable, meaning from your apartment, your dorm or even your parents home. </li>
+            <li>If you are setting your address to where your parents live, then send in your absentee ballot as early as possible.</li>
+
+
+          </ul>
+
+
         
         </div>
     </div>
 </div>
-
+<br>
 <!-- javascript for tabs -->
 <script>
 $(document).ready(function() {
@@ -131,71 +144,78 @@ $(document).ready(function() {
 
 <!--  end javascript for tabs
 begin ballot code -->
-<div id= "dropdown-info">
-  <h3>Search for your state's ballot</h3>
-  <p> Getting to know your ballot before voting is crucial to the voting process. Get an example of your state's ballot by choosing your state from the drop down menu below. </p>
-</div>
-
-<div class="dropdown">
-<button onclick="dropDown()" class="drop">Find your state</button>
-  <div id="findMe" class="dropdown-content">
-    <input type="text" placeholder="Search.." id="userInput" onkeyup="filterFunction()">
-       <!--  <a href="#">Alabama</a>
-        <a href="#">Alaska</a>
-        <a href="#">Arizona</a>
-        <a href="#">Arkansas</a>
-        <a href="#">California</a>
-        <a href="#">Colorado</a>
-        <a href="#">Connecticut</a>
-        <a href="#">Delaware</a>
-        <a href="#">Florida</a>
-        <a href="#">Georgia</a>
-        <a href="#">Hawaii</a>
-        <a href="#">Idaho</a>
-        <a href="#">Illinois</a>
-        <a href="#">Indiana</a>
-        <a href="#">Iowa</a>
-        <a href="#">Kansas</a>
-        <a href="#">Kentucky</a>
-        <a href="#">Louisiana</a>
-        <a href="#">Maine</a>
-        <a href="#">Maryland</a>
-        <a href="#">Massachusetts</a>
-        <a href="#">Michigan</a>
-        <a href="#">Minnesota</a>
-        <a href="#">Mississippi</a>
-        <a href="#">Missouri</a>
-        <a href="#">Montana</a>
-        <a href="#">Nebraska</a>
-        <a href="#">Nevada</a>
-        <a href="#">New Hampshire</a> -->
-        <a href="#" onclick="setStyle(this)">New Jersey</a>
-       <!--  <a href="#">New Mexico</a> -->
-        <a href="#" onclick="setStyle(this)">New York</a>
-        <!-- <a href="#">North Carolina</a>
-        <a href="#">North Dakota</a>
-        <a href="#">Ohio</a>
-        <a href="#">Oklahoma</a>
-        <a href="#">Oregon</a>
-        <a href="#">Pennsylvania</a>
-        <a href="#">Rhode Island</a>
-        <a href="#">South Carolina</a>
-        <a href="#">South Dakota</a>
-        <a href="#">Tennessee</a>
-        <a href="#">Texas</a>
-        <a href="#">Utah</a>
-        <a href="#">Vermont</a>
-        <a href="#">Virginia</a>
-        <a href="#">Washington</a>
-        <a href="#">West Virginia</a>
-        <a href="#">Wisconsin</a> 
-        <a href="#">Wyoming</a> -->
-      </div>
-
+<div class="row">
+  <div class="col-md-4"> <!-- search stuff-->
+    <div id= "dropdown-info">
+      <h3>Search for your state's ballot</h3>
+      <p> Getting to know your ballot before voting is crucial to the voting process. Get an example of your state's ballot by choosing your state from the drop down menu below. Looking for an absentee ballot example? Search absentee in the dropdown below.</p>
     </div>
-  <!-- images -->
-  <div id= "images">
-  </div>
+
+    <div class="dropdown col-md-4">
+    <button onclick="dropDown()" class="drop">Find your state</button>
+      <div id="findMe" class="dropdown-content">
+        <input type="text" placeholder="Search.." id="userInput" onkeyup="filterFunction()">
+          <a href="#">Choose State</a>
+           <!--  <a href="#">Alabama</a>
+            <a href="#">Alaska</a>
+            <a href="#">Arizona</a>
+            <a href="#">Arkansas</a>
+            <a href="#">California</a>
+            <a href="#">Colorado</a>
+            <a href="#">Connecticut</a>
+            <a href="#">Delaware</a>
+            <a href="#">Florida</a>
+            <a href="#">Georgia</a>
+            <a href="#">Hawaii</a>
+            <a href="#">Idaho</a>
+            <a href="#">Illinois</a>
+            <a href="#">Indiana</a>
+            <a href="#">Iowa</a>
+            <a href="#">Kansas</a>
+            <a href="#">Kentucky</a>
+            <a href="#">Louisiana</a>
+            <a href="#">Maine</a>
+            <a href="#">Maryland</a>
+            <a href="#">Massachusetts</a>
+            <a href="#">Michigan</a>
+            <a href="#">Minnesota</a>
+            <a href="#">Mississippi</a>
+            <a href="#">Missouri</a>
+            <a href="#">Montana</a>
+            <a href="#">Nebraska</a>
+            <a href="#">Nevada</a>
+            <a href="#">New Hampshire</a> -->
+            <a href="#" onclick="setStyle(this)">New Jersey</a>
+           <!--  <a href="#">New Mexico</a> -->
+            <a href="#" onclick="setStyle(this)">New York</a>
+            <!-- <a href="#">North Carolina</a>
+            <a href="#">North Dakota</a>
+            <a href="#">Ohio</a>
+            <a href="#">Oklahoma</a>
+            <a href="#">Oregon</a>
+            <a href="#">Pennsylvania</a>
+            <a href="#">Rhode Island</a>
+            <a href="#">South Carolina</a>
+            <a href="#">South Dakota</a>
+            <a href="#">Tennessee</a>
+            <a href="#">Texas</a>
+            <a href="#">Utah</a>
+            <a href="#">Vermont</a>
+            <a href="#">Virginia</a>
+            <a href="#">Washington</a>
+            <a href="#">West Virginia</a>
+            <a href="#">Wisconsin</a> 
+            <a href="#">Wyoming</a> -->
+          </div>
+
+        </div>
+      </div>
+    <!-- images -->
+
+    <div id= "images" class="col-md-7">
+    </div>
+
+  </div> <!-- close row-->
 
 
 <script>
@@ -231,16 +251,17 @@ function setStyle(state){
   switch(state.innerHTML){
     case "New York":
       // do something
-      filename= "million.png";
+      filename= "newyork.jpg";
       break;
     case "New Jersey":
-      filename= "seventeenpercent.png";
+      filename= "newjersey.jpeg";
       break;
     default:
-      filename= "hi";
+      filename= "paint.jpg";
       // do something
   }
   show.src= filename;
+  show.className = "state col-md-12";
   document.getElementById("images").appendChild(show);
 
 }

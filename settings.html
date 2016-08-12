@@ -7,15 +7,16 @@
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-	<!-- jQuery library -->
+	<!-- jQuery y -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 	<!-- Latest compiled JavaScript -->
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
  <!--  css -->
-  <link rel="stylesheet" type="text/css" href="howtocss.css">
+  <link rel="stylesheet" type="text/css" href="settingscss.css">
 	</head>
+
 	<body>
 
 	<div class = "container">
@@ -23,7 +24,6 @@
 <!--  nav bar -->
   <nav class="navbar navbar-inverse">
   <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
     <div id= "logo">
       <center><img src= "newlogo.png" width=250 height=200></center>
     </div>
@@ -34,7 +34,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-     <!--  <a class="navbar-brand" href="#">Poll Me</a> -->
+     <!--  <a class="navbad" href="#">Poll Me</a> -->
     </div>
 
 
@@ -45,15 +45,50 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="map.html">Map</a></li>
             <li><a href="howto.html">How-To</a></li>
-            <li><a href="settings.html">Settings </a></li>
+            <li><a href="settings.html">Contact Us</a></li>
           </ul>
     </div><!-- /.navbar-collapse -->
+
+    <form action="https://formspree.io/lhon4644@bths.edu"
+      method="POST">
+  <div class="form-group" >
+     <label for="name" class="col-sm-2 control-label" id="form">Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="name" name="Name" placeholder="First & Last Name" value="">
+      <br>
+    </div>
+  </div>
+  <div class="form-group" >
+     <label for="email" class="col-sm-2 control-label" id="form">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="email" name="Email" placeholder="example@domain.com" value="">
+      <br>
+    </div>
+  </div>
+  <div class="form-group" >
+     <label for="message" class="col-sm-2 control-label" id="form">Message</label>
+    <div class="col-sm-10">
+      <textarea class="form-control" rows="4" name="Message"></textarea>
+      <br>
+    </div>
+  </div>
+  <div class="form-group">
+     <div class="col-sm-10 col-sm-offset-2">
+      <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+    </div>
+  </div>
+</form>
+
+
+
+
   </div><!-- /.container-fluid -->
 
   <div id="spacing">
-  <p><p>
+  <p></p>
 </div>
 	</div>
+
 
 	</body>
 <html>

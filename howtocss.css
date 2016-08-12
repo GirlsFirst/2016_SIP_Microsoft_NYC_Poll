@@ -19,7 +19,7 @@
 #necessary p{
 	padding-left: 30px;
 	font-size: 25px;
-	background-color: #222222;
+	/*background-color: #222222;*/
 	margin-top: -40px;
 	padding-top: 25px;
 	text-decoration: underline;
@@ -27,7 +27,7 @@
 
 
 #necessaryinfo p{
-	background-color: #222222;
+/*	background-color: #222222;*/
 	font-size: 15px;
 	margin-top: -10px;
 	padding-left: 30px;
@@ -35,7 +35,7 @@
 }
 
 #necessarylist {
-	background-color: #222222;
+/*	background-color: #222222;*/
 	font-size: 15px;
 	margin-top: -10px;
 	padding-left: 35px;
@@ -43,19 +43,12 @@
 	padding-bottom: 300px;
 }
 
-#asterik p{
-	background-color: #222222;
-	font-size: 10px;
-	margin-top: -10px;
-	padding-left: 40px;
-	color: white;
-}
 
 #infobox {
 	width: 400px;
 	float: right;
 	margin-left: 10px;
-	background: #222222;
+	/*background: #222222;*/
 	margin-top: -140px;
 	border-color: #E74C3C;
 	border-style: dashed;
@@ -74,7 +67,7 @@
 }
 
 #infobox #tips li{
-	color: white;
+
 }
 
 
@@ -88,7 +81,7 @@ font-size: 14px;
 #tabs{
 	background-color: #222222;
 	margin-bottom: 150px;
-	padding-bottom: 150px;
+	/*padding-bottom: 150px;*/
 	margin-top: -300px;
 	padding-top: 20px;
 }
@@ -135,20 +128,19 @@ font-size: 14px;
 }
 
 .tab {
-    border: 1px solid #d4d4d1;
+    /*border: 1px solid #d4d4d1;
     background-color: #fff;
     float: right;
     margin-bottom: 20px;
     width: auto;
     margin-top: -300px;
     margin-left: -30px;
-    margin-right: 60px;
+    margin-right: 60px;*/
 
 }
 
 .tab-content {
-    width: 660px;
-    padding: 0px;
+
     display: none;
 
 }
@@ -158,17 +150,15 @@ font-size: 14px;
 }
 
 #tabs-container {
-	 padding-top: 60px;
+	/* padding-top: 60px;*/
 }
 
 /*css for dropdown*/
 .drop{
     background-color: #3F48CC;
     color: white;
-
     font-size: 16px;
     border: none;
-    cursor: pointer;
     margin-top: -400px;
     padding-top: -40px;
 }
@@ -181,7 +171,6 @@ font-size: 14px;
     background-position: 14px 12px;
     background-repeat: no-repeat;
     font-size: 16px;
-    
     border: none;
 }
 
@@ -204,7 +193,6 @@ font-size: 14px;
 
 .dropdown-content a {
     color: black;
-
     text-decoration: none;
     display: block;
 }
@@ -222,19 +210,34 @@ font-size: 14px;
 
 #images{
 	background-color: #222222;
-	padding-left: 150px;
-	padding-right: 100px;
-	margin-top: -80px;
-	margin-right: 55px;
-	margin-left: 20px;
+/*	padding-left: 150px;
+	padding-right: 200px;*/
+	/*margin-top: -80px;
+	margin-right: 57.5px;
+	margin-left: 40px;*/
+	/*padding-bottom: 3px;*/
+	
 }
 
 #dropdown-info{
 	background-color: #222222;
 	color: white;
-	margin-top: -100px;
-	margin-right: -60px;
+/*	margin-top: -100px;
+	margin-right: -60px;*/
 	padding-bottom: 40px;
-	padding-right: 40px;
+	padding-right: 100px;
 	padding-left: 30px;
+	background-size: 100% 100%;
+}
+
+#all {
+	background-color: #222222;
+}
+
+.container {
+	background-color: #222222;
+}
+
+body {
+	color: white;
 }

@@ -46,7 +46,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="map.html">Map</a></li>
             <li><a href="howto.html">How-To</a></li>
-            <li><a href="settings.html">Settings </a></li>
+            <li><a href="settings.html">Contact Us</a></li>
           </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -57,78 +57,93 @@
 
 <body>
 <!-- necessary forms  -->
-<div id= "necessary"> 
-  <p>Necessities for Voting:</p>
-</div>
+<br>
+<div class= "row">
+  <div class= "col-md-6">
+
+<!-- left aligned necessary for voting  -->
+    <div id= "necessary"> 
+      <p>Necessities for Voting:</p>
+    </div>
   
-  <div id= "necessaryinfo">
-    <p> While many states have different voting laws, the vast majority require: <p>
-  </div>
-      <div id= "necessarylist">
+    <div id= "necessaryinfo">
+      <p> While many states have different voting laws, the vast majority require: <p>
+    </div>
+
+    <div id= "necessarylist">
       <ul>
         <li> The voter to be of the age 18 or older*</li>
         <li> A completed Voter Registration Form to have been submitted </li>
         <li> Identification such as a Driver's License (some states do not require Photo ID with the License)</li>
       </ul>
-      <div id= "asterik">
-        <p>*This is a nationwide law and not based upon state</p>
-      </div>
+      <p>*This is a nationwide law and not based upon state</p>
+    </div>
 
+    
 
+  </div>
 
-<div id= "infobox">
-  <div id= "tips">
-  <b> Tips for Voting Day: </b>
-  <br>
-    <ul>
-      <li> • Make sure your voter registration was approved!</li>
-      <li> • Double check your polling location </li>
-      <li> • Check what forms of ID your voting location requires</li>
-      <li> • Understand your ballot before voting by looking up your states ballot example</li>
-      <li> • Vote carefully </li>
-    </ul>
+<!-- dotted red box -->
+  <div class= "col-md-6" >
+    
+    <div id= "necessaryinfo">
+      <b> Tips for Voting Day: </b>
+      <br>
+      <ul>
+        <li> • Make sure your voter registration was approved!</li>
+        <li> • Double check your polling location </li>
+        <li> • Check what forms of ID your voting location requires</li>
+        <li> • Understand your ballot before voting by looking up your states ballot example</li>
+        <li> • Vote carefully </li>
+      </ul>
+   </div>
+
   </div>
 </div>
-</div>
 
+
+<br>
 
 
 <!-- regular and absentee ballot tabs-->
+<div class= "row">
+  <div id="tabs-container">
+    <div class="col-md-4">
+    <a href="#tab-1">In-State Voting</a>
+      
+     <a href="#tab-2">Absentee Ballot</a>
+  </div>
 
-<div id="tabs-container">
-    <ul class="tabs-menu" id="tabs">
-        <li class="current"><a href="#tab-1">In-State Voting</a></li>
-        <li><a href="#tab-2">Absentee Ballot</a></li>
-    </ul>
-    <div class="tab">
-        <div id="tab-1" class="tab-content">
-            <ul>
-              <li>You have to be a resident of the United States. </li>
-              <li> You can not be in jail or in probation. </li>
-              <li> If you just moved in, you can always check online to see how long you have to wait in order for you to vote. e.g: You have to be a New York resident for at least 30 days in order for you to vote. </li>
-              <li>You have to be 18 years old before the next election. </li>
-            <ul>
-        </div>
-        <div id="tab-2" class="tab-content">
-           <p> What do I need to register to vote as an absentee?</p>
-           <ul>
-            <li> Have some sort picture identification. Some states aren’t strict so they’ll accept an I.D without your picture.
-             (Recommended: bring an I.D with your picture for safe measures) </li>
-            <li>You will need to use your first and last name!</li>
-            <li>Include where you are living as of now. </li>
-            <li>If you are a college student you are able to register to vote from where you feel most comfortable, meaning from your apartment, your dorm or even your parents home. </li>
-            <li>If you are setting your address to where your parents live, then send in your absentee ballot as early as possible.</li>
+    <div class="tab col-md-8">
 
+      <div id="tab-1" class="tab-content ">
+          <ul>
+            <li>You have to be a resident of the United States. </li>
+            <li> You can not be in jail or in probation. </li>
+            <li> If you just moved in, you can always check online to see how long you have to wait in order for you to vote. e.g: You have to be a New York resident for at least 30 days in order for you to vote. </li>
+            <li>You have to be 18 years old before the next election. </li>
+          <ul>
+      </div>
 
-          </ul>
+      <div id="tab-2" class="tab-content">
+         <p> What do I need to register to vote as an absentee?</p>
+         <ul>
+          <li> Have some sort picture identification. Some states aren’t strict so they’ll accept an I.D without your picture.
+           (Recommended: bring an I.D with your picture for safe measures) </li>
+          <li>You will need to use your first and last name!</li>
+          <li>Include where you are living as of now. </li>
+          <li>If you are a college student you are able to register to vote from where you feel most comfortable, meaning from your apartment, your dorm or even your parents home. </li>
+          <li>If you are setting your address to where your parents live, then send in your absentee ballot as early as possible.</li>
+         </ul>
+      </div>
 
-
-        
-        </div>
     </div>
+  </div>
 </div>
-<br>
-<!-- javascript for tabs -->
+
+
+
+<!-- javascript for tabs change on monday to onclick function innerHTML-->
 <script>
 $(document).ready(function() {
     $(".tabs-menu a").click(function(event) {
@@ -144,7 +159,7 @@ $(document).ready(function() {
 
 <!--  end javascript for tabs
 begin ballot code -->
-<div class="row">
+<div class="row" id="all">
   <div class="col-md-4"> <!-- search stuff-->
     <div id= "dropdown-info">
       <h3>Search for your state's ballot</h3>
@@ -155,64 +170,23 @@ begin ballot code -->
     <button onclick="dropDown()" class="drop">Find your state</button>
       <div id="findMe" class="dropdown-content">
         <input type="text" placeholder="Search.." id="userInput" onkeyup="filterFunction()">
-          <a href="#">Choose State</a>
-           <!--  <a href="#">Alabama</a>
-            <a href="#">Alaska</a>
-            <a href="#">Arizona</a>
-            <a href="#">Arkansas</a>
-            <a href="#">California</a>
-            <a href="#">Colorado</a>
-            <a href="#">Connecticut</a>
-            <a href="#">Delaware</a>
-            <a href="#">Florida</a>
-            <a href="#">Georgia</a>
-            <a href="#">Hawaii</a>
-            <a href="#">Idaho</a>
-            <a href="#">Illinois</a>
-            <a href="#">Indiana</a>
-            <a href="#">Iowa</a>
-            <a href="#">Kansas</a>
-            <a href="#">Kentucky</a>
-            <a href="#">Louisiana</a>
-            <a href="#">Maine</a>
-            <a href="#">Maryland</a>
-            <a href="#">Massachusetts</a>
-            <a href="#">Michigan</a>
-            <a href="#">Minnesota</a>
-            <a href="#">Mississippi</a>
-            <a href="#">Missouri</a>
-            <a href="#">Montana</a>
-            <a href="#">Nebraska</a>
-            <a href="#">Nevada</a>
-            <a href="#">New Hampshire</a> -->
+            <a href="#"  onclick="setStyle(this)">Absentee Ballot</a>
+            <a href="#" onclick="setStyle(this)">Connecticut</a>
+            <a href="#"  onclick="setStyle(this)">North Dakota</a>
+            <a href="#"  onclick="setStyle(this)">New Hampshire</a>
             <a href="#" onclick="setStyle(this)">New Jersey</a>
-           <!--  <a href="#">New Mexico</a> -->
             <a href="#" onclick="setStyle(this)">New York</a>
-            <!-- <a href="#">North Carolina</a>
-            <a href="#">North Dakota</a>
-            <a href="#">Ohio</a>
-            <a href="#">Oklahoma</a>
-            <a href="#">Oregon</a>
-            <a href="#">Pennsylvania</a>
-            <a href="#">Rhode Island</a>
-            <a href="#">South Carolina</a>
-            <a href="#">South Dakota</a>
-            <a href="#">Tennessee</a>
-            <a href="#">Texas</a>
-            <a href="#">Utah</a>
-            <a href="#">Vermont</a>
-            <a href="#">Virginia</a>
-            <a href="#">Washington</a>
-            <a href="#">West Virginia</a>
-            <a href="#">Wisconsin</a> 
-            <a href="#">Wyoming</a> -->
+            <a href="#"  onclick="setStyle(this)">Pennsylvania</a>
+            <a href="#"  onclick="setStyle(this)">South Dakota</a>
+
           </div>
 
         </div>
       </div>
     <!-- images -->
 
-    <div id= "images" class="col-md-7">
+    <div id= "images" class="col-md-8" >
+      <img src= "blankmap.png">
     </div>
 
   </div> <!-- close row-->
@@ -238,10 +212,6 @@ function filterFunction() {
     }
 }
 
-// function setStyle(){
-//   document.getElementById("newYork").style.display="block";
-
-// }
 
 function setStyle(state){
   document.getElementById("images").innerHTML = ""
@@ -249,22 +219,49 @@ function setStyle(state){
   console.log(state.innerHTML);
   var filename;
   switch(state.innerHTML){
+    case "Alabama":
+    filename= "alabama.png";
+    break;
+      // do something
+    case "Alaska":
+    filename= "https://www.google.com/search?q=alaska+sample+ballot&rlz=1C1CHBF_enUS700US700&espv=2&biw=1244&bih=715&tbm=isch&source=lnms&sa=X&ved=0ahUKEwj3_4flrLzOAhVD0GMKHUAbD5wQ_AUIBygC#imgrc=b3MXh6ZyjJdTEM%3A";
+    break;
     case "New York":
       // do something
-      filename= "newyork.jpg";
+      filename= "newyork.png";
       break;
     case "New Jersey":
       filename= "newjersey.jpeg";
       break;
-    default:
-      filename= "paint.jpg";
       // do something
+    case "Pennsylvania":
+       // do something
+      filename="pennballot.png";
+      break;
+    case "South Dakota":
+      filename= "https://sdsos.gov/elections-voting/upcoming-elections/general-information/2016-Presidential-Ballot-Access_clip_image001.jpg";
+      break;
+    case "North Dakota":
+     // do something
+      filename= "northdakota.jpeg";
+      break;
+    case "New Hampshire":
+      filename= "http://mediad.publicbroadcasting.net/p/nhpr/files/styles/medium/public/201410/Ballot.jpg";
+      break;
+    case "Connecticut":
+      filename= "https://activerain-store.s3.amazonaws.com/image_store/uploads/agents/barbaraaltieri/files/ELIZABETH_SHELTON%20resized.jpg";
+      break;
+    case "Absentee Ballot":
+      filename= "https://vote.franklincountyohio.gov/assets/images/application-for-absentee-voters-ballot-thumbnail.jpg";
+      break;
   }
   show.src= filename;
   show.className = "state col-md-12";
   document.getElementById("images").appendChild(show);
 
 }
+
+
 </script>
 
 	</body>

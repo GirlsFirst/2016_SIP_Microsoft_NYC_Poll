@@ -1,4 +1,5 @@
- var polldata;
+
+    var polldata;
 
     // this is where loop begins
 

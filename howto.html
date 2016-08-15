@@ -18,9 +18,10 @@
 
 	<!-- Latest compiled JavaScript -->
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="scripts/howtojava.js"></script>
 
   <!-- css  -->
-   <link rel="stylesheet" type="text/css" href="howtocss.css">
+   <link rel="stylesheet" type="text/css" href="stylesheets/howtocss.css">
 
 	</head>
 
@@ -35,7 +36,7 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div id= "logo">
-      <center><img src= "newlogo.png" width=250 height=200></center>
+      <center><img src= "assets/newlogo.png" width=250 height=200></center>
     </div>
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -100,7 +101,7 @@
       
 <!-- regular and absentee ballot tabs-->
 <div class= "row">
-  <div class= "col-md-4">
+  <div class= "col-md-6">
     <button id="inStateButton" onclick="inState()"> Show Information on In-State Voting</button>
     <div id= "inState" style="display:none;">
        <ul>
@@ -110,10 +111,10 @@
             <li>You have to be 18 years old before the next election. </li>
           <ul>
     </div>
-    
-    <br>
-    <br>
+  </div>
 
+
+    <div class= "col-md-6">
     <button id= "absenteeButton" onclick= "absentee()"> Show Information on Absentee Ballots </button>
     <div id= "absentee" style="display:none;">
       <p> What do I need to register to vote as an absentee?</p>
@@ -128,45 +129,10 @@
         </ul>
     </div>
   </div>
+
 </div>
 
-<!-- javascript for buttons -->
-<script>
-
-// function for instate button
-function inState(){
-    var state = document.getElementById("inState");
-    var stateDisplay = state.style.display;
-    var stateButton = document.getElementById("inStateButton");
-    if (stateDisplay == "block") {
-        state.style.display = "none";
-        stateButton.innerHTML = "Show Information on In-State Voting ";
-    }
-    else {
-        state.style.display = "block";
-        stateButton.innerHTML = "Hide Information on In-State Voting";
-    }
-  }
-
-
-// function for absentee button
-function absentee(){
-    var absentee = document.getElementById("absentee");
-    var absenteeDisplay = absentee.style.display;
-    var absenteeButton = document.getElementById("absenteeButton");
-    if (absenteeDisplay == "block") {
-        absentee.style.display = "none";
-        absenteeButton.innerHTML = "Show Information on Absentee Ballots ";
-    }
-    else {
-        absentee.style.display = "block";
-        absenteeButton.innerHTML = "Hide Information on Absentee Ballots";
-    }
-  }
-
-
-</script> <!-- end script for buttons -->
-
+<br>
 
 
 <!--  end javascript for tabs
@@ -198,7 +164,7 @@ begin ballot code -->
     <!-- images -->
 
     <div id= "images" class="col-md-8" >
-      <img src= "blankmap.png">
+      <img src= "assets/blankmap.png">
     </div>
 
   </div> <!-- close row-->
@@ -232,7 +198,7 @@ function setStyle(state){
   var filename;
   switch(state.innerHTML){
     case "Alabama":
-    filename= "alabama.png";
+    filename= "assets/alabama.png";
     break;
       // do something
     case "Alaska":
@@ -240,22 +206,22 @@ function setStyle(state){
     break;
     case "New York":
       // do something
-      filename= "newyork.png";
+      filename= "assets/newyork.png";
       break;
     case "New Jersey":
-      filename= "newjersey.jpeg";
+      filename= "assets/newjersey.jpeg";
       break;
       // do something
     case "Pennsylvania":
        // do something
-      filename="pennballot.png";
+      filename="assets/pennballot.png";
       break;
     case "South Dakota":
       filename= "https://sdsos.gov/elections-voting/upcoming-elections/general-information/2016-Presidential-Ballot-Access_clip_image001.jpg";
       break;
     case "North Dakota":
      // do something
-      filename= "northdakota.jpeg";
+      filename= "assets/northdakota.jpeg";
       break;
     case "New Hampshire":
       filename= "http://mediad.publicbroadcasting.net/p/nhpr/files/styles/medium/public/201410/Ballot.jpg";

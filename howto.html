@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+  
+
 	<head>
+
+  <title>
+    How-To 
+  </title>
 	<meta charset = "utf-8">
 	<meta name = "viewport" content = "width-device-width, initial-scale = 1">
 
@@ -15,7 +21,10 @@
 
   <!-- css  -->
    <link rel="stylesheet" type="text/css" href="howtocss.css">
+
 	</head>
+
+
 	<body>
 
 	<div class = "container">
@@ -56,106 +65,109 @@
 </div>
 
 <body>
-<!-- necessary forms  -->
-<br>
+<!-- necessary forms and for voting section begins here -->
 <div class= "row">
   <div class= "col-md-6">
-
-<!-- left aligned necessary for voting  -->
-    <div id= "necessary"> 
-      <p>Necessities for Voting:</p>
-    </div>
-  
-    <div id= "necessaryinfo">
-      <p> While many states have different voting laws, the vast majority require: <p>
-    </div>
-
-    <div id= "necessarylist">
+    <div id= "necessary">
+      <p style="text-decoration: underline; font-size: 20px;">Necessities for Voting: </p> 
+      <p >While many states have different voting laws, the vast majority require:</p>
+      <br>
       <ul>
         <li> The voter to be of the age 18 or older*</li>
         <li> A completed Voter Registration Form to have been submitted </li>
         <li> Identification such as a Driver's License (some states do not require Photo ID with the License)</li>
       </ul>
-      <p>*This is a nationwide law and not based upon state</p>
+      <p style= "font-size: 8px;">*This is a nationwide law and not based upon state</p>
     </div>
-
-    
-
   </div>
 
-<!-- dotted red box -->
-  <div class= "col-md-6" >
-    
-    <div id= "necessaryinfo">
-      <b> Tips for Voting Day: </b>
+<!-- tips for voting day: -->
+  <div class= "col-md-6">
+    <div id= "tipsforvoting">
+      <p style= "text-decoration: underline; font-size: 20px;"> Tips for Voting Day: </p>
       <br>
       <ul>
-        <li> • Make sure your voter registration was approved!</li>
-        <li> • Double check your polling location </li>
-        <li> • Check what forms of ID your voting location requires</li>
-        <li> • Understand your ballot before voting by looking up your states ballot example</li>
-        <li> • Vote carefully </li>
+        <li> Make sure your voter registration was approved!</li>
+        <li> Double check your polling location </li>
+        <li> Check what forms of ID your voting location requires</li>
+        <li> Understand your ballot before voting by looking up your states ballot example</li>
+        <li> Vote carefully </li>
       </ul>
    </div>
-
   </div>
-</div>
+</div> <!-- div that closes the row -->
 
-
-<br>
-
-
+      
 <!-- regular and absentee ballot tabs-->
 <div class= "row">
-  <div id="tabs-container">
-    <div class="col-md-4">
-    <a href="#tab-1">In-State Voting</a>
-      
-     <a href="#tab-2">Absentee Ballot</a>
-  </div>
-
-    <div class="tab col-md-8">
-
-      <div id="tab-1" class="tab-content ">
-          <ul>
+  <div class= "col-md-4">
+    <button id="inStateButton" onclick="inState()"> Show Information on In-State Voting</button>
+    <div id= "inState" style="display:none;">
+       <ul>
             <li>You have to be a resident of the United States. </li>
             <li> You can not be in jail or in probation. </li>
             <li> If you just moved in, you can always check online to see how long you have to wait in order for you to vote. e.g: You have to be a New York resident for at least 30 days in order for you to vote. </li>
             <li>You have to be 18 years old before the next election. </li>
           <ul>
-      </div>
+    </div>
+    
+    <br>
+    <br>
 
-      <div id="tab-2" class="tab-content">
-         <p> What do I need to register to vote as an absentee?</p>
-         <ul>
+    <button id= "absenteeButton" onclick= "absentee()"> Show Information on Absentee Ballots </button>
+    <div id= "absentee" style="display:none;">
+      <p> What do I need to register to vote as an absentee?</p>
+        <ul>
           <li> Have some sort picture identification. Some states aren’t strict so they’ll accept an I.D without your picture.
-           (Recommended: bring an I.D with your picture for safe measures) </li>
+          (Recommended: bring an I.D with your picture for safe measures)
+          </li>
           <li>You will need to use your first and last name!</li>
           <li>Include where you are living as of now. </li>
           <li>If you are a college student you are able to register to vote from where you feel most comfortable, meaning from your apartment, your dorm or even your parents home. </li>
           <li>If you are setting your address to where your parents live, then send in your absentee ballot as early as possible.</li>
-         </ul>
-      </div>
-
+        </ul>
     </div>
   </div>
 </div>
 
-
-
-<!-- javascript for tabs change on monday to onclick function innerHTML-->
+<!-- javascript for buttons -->
 <script>
-$(document).ready(function() {
-    $(".tabs-menu a").click(function(event) {
-        event.preventDefault();
-        $(this).parent().addClass("current");
-        $(this).parent().siblings().removeClass("current");
-        var tab = $(this).attr("href");
-        $(".tab-content").not(tab).css("display", "none");
-        $(tab).fadeIn();
-    });
-});
-</script>
+
+// function for instate button
+function inState(){
+    var state = document.getElementById("inState");
+    var stateDisplay = state.style.display;
+    var stateButton = document.getElementById("inStateButton");
+    if (stateDisplay == "block") {
+        state.style.display = "none";
+        stateButton.innerHTML = "Show Information on In-State Voting ";
+    }
+    else {
+        state.style.display = "block";
+        stateButton.innerHTML = "Hide Information on In-State Voting";
+    }
+  }
+
+
+// function for absentee button
+function absentee(){
+    var absentee = document.getElementById("absentee");
+    var absenteeDisplay = absentee.style.display;
+    var absenteeButton = document.getElementById("absenteeButton");
+    if (absenteeDisplay == "block") {
+        absentee.style.display = "none";
+        absenteeButton.innerHTML = "Show Information on Absentee Ballots ";
+    }
+    else {
+        absentee.style.display = "block";
+        absenteeButton.innerHTML = "Hide Information on Absentee Ballots";
+    }
+  }
+
+
+</script> <!-- end script for buttons -->
+
+
 
 <!--  end javascript for tabs
 begin ballot code -->
@@ -264,6 +276,23 @@ function setStyle(state){
 
 </script>
 
-	</body>
+  </body>
 <html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

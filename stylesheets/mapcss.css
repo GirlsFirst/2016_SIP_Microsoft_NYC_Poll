@@ -1,15 +1,15 @@
 /*css for map page */
-.nav a{	
-	 color: white !important;
-	 font-size: 1.4em !important;
+.nav a{ 
+     color: white !important;
+     font-size: 1.4em !important;
 }
 .navbar-brand {
-	 color: white !important;
+     color: white !important;
 }
 
 #text {
-	 color: white !important;
-	 font-size: 1.4em !important;
+     color: white !important;
+     font-size: 1.4em !important;
 }
 #map{
     width: 100%;

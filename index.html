@@ -7,26 +7,17 @@
   <meta name = "viewport" content = "width-device-width, initial-scale = 1">
 
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
   <!-- Latest compiled JavaScript -->
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="scripts/indexjava.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
   <!-- css -->
   <link rel="stylesheet" type="text/css" href="stylesheets/indexcss.css">
-
-  <link href="c3.css" rel="stylesheet" type="text/css">
-
-  <!-- Load d3.js and c3.js -->
-  <script src="http://d3js.org/d3.v3.min.js"></script>
-
-  <script src="c3.js"></script>
-
 
   </head>
 
@@ -96,56 +87,15 @@
     </div>
 </div>
 
-<br>
 
-<div class= "row">
-  <div class= "col-md-12">
-    <div id="chart">
+<hr>
 
-<script>
-var chart1 = c3.generate({
-    bindto: '#chart',
-    data: {
-      columns: [
-        ['Age Group', 45.0, 59.5, 67.9, 72.0],
-      ],
-  type: 'bar',
-  colors: {
-    'Age Group': '#404DC9'
-  },
-},
-    axis: {
-    x: {
-      type: 'category',
-      categories: ['18 to 29', '30 to 44', '45 to 64', '65 and older']
-    },
-    y: {
-      max: 100,
-      min: 10,
-    }
-  }
-});
-
-d3.select('#chart svg').append('text')
-    .attr('x', d3.select('#chart svg').node().getBoundingClientRect().width / 2)
-    .attr('y', 16)
-    .attr('text-anchor', 'middle')
-    .style('font-size', '1.8em')
-    .style("text-decoration", "underline")
-    .text('Voting Percentages by Age (2012)');
-</script>
-
-    </div>
-  </div>
-</div>
-
-<div class="ourpurpose">
+<class="ourpurpose">
   <div id= "purpose">
   <center><font id="header"> Our Purpose</font></center>
   <p id="text"> Are you a confused college voter living out of state? Or, just an eligible voter who hasn't voted before 
     Dedicated to helping eligible voters find the voting locations near them, <br>Poll Me offers a new way to vote. 
      No longer can "I didn't know where to vote" be an excuse for you! Get started by clicking "map" in the navigation bar above.   <p>
-</div>
 
 </body>
 <html>

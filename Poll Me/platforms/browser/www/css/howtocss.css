@@ -1,0 +1,82 @@
+.nav a{	
+	color
+	: white !important;
+	font-size: 1.4em !important;
+}
+.navbar-brand {
+	color: white !important;
+}
+
+.container {
+	background-color: #222222;
+}
+
+body {
+	color: white;
+}
+
+#inStateButton {
+	color: white;
+	background-color: #404DC9;
+
+}
+
+#absenteeButton {
+	color: white;
+	background-color: #404DC9;
+}
+
+.drop{
+    background-color: #3F48CC;
+    color: white;
+
+}
+#userInput {
+    color: black;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    overflow: auto;
+    height: 300px;
+	width: 350px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 230px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+}
+
+.dropdown-content a {
+    color: black;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #ddd}
+
+#dropdown-info{
+	background-color: #222222;
+	color: white;
+	padding-bottom: 40px;
+	padding-right: 100px;
+	padding-left: 30px;
+	background-size: 100% 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+

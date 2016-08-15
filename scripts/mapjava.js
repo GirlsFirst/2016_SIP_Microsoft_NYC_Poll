@@ -65,8 +65,10 @@ function polls(){
           geocodeAddress(geocoder, map);
         });
 
+      $.ajaxSetup({cache: false})
       $.getJSON('pollingdata.json', function(data){
         polldata = data;
+        $ajaxSetup({cache: true});
         polls();
       });
     }

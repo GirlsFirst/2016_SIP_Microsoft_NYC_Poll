@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+  <title>
+    Locate Your Polling Location
+  </title>
+  <meta charset = "utf-8">
+  <meta name = "viewport" content = "width-device-width, initial-scale = 1.0, user-scalable = no">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src= "scripts/mapjava.js"></script>
+
+   <!-- css -->
+  <link rel="stylesheet" type="text/css" href="stylesheets/mapcss.css">
+  
+
+  </head>
+  <body>
+  
+  <div class = "container">
+
+<!--  nav bar -->
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div id= "logo">
+      <center><img src= "assets/newlogo.png" width=250 height=200></center>
+    </div>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <!--  <a class="navbar-brand" href="#">Poll Me</a> -->
+    </div>
+
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+ 
+      <ul class="nav nav-tabs nav-justified">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="map.html">Map</a></li>
+            <li><a href="howto.html">How-To</a></li>
+            <li><a href="contactus.html">Contact Us </a></li>
+          </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+
+<br>
+    <div id="floating-panel">
+      <input id="address" type="textbox" value="New York">
+      <input id="submit" type="button" value="Find voting locations near me!">
+    </div>
+
+  <div id="map">
+
+  </div>
+
+    <script
+    async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8JNB8hb8ZDPUWgL2hkc5tjEHiyuzzBP0&callback=initMap">
+    </script>
+
+
+  </body>
+<html>

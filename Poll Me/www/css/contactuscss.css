@@ -1,0 +1,19 @@
+/*css for settings page*/
+.nav a{	
+	color: white !important;
+	font-size: 1.4em !important;
+}
+.navbar-brand {
+	color: white !important;
+}
+
+#spacing {
+	margin-top: 30px !important;
+}
+.list-group {
+	background-color: #222222;
+}
+
+.form-group {
+	color: white;
+}

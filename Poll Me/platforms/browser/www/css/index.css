@@ -1,0 +1,64 @@
+/*css for final project home page*/
+.navbar-nav > li > a, .navbar-brand { 
+	padding-top: 40px !important;
+	height: 8px !important;
+	}
+
+.nav a{	
+	color
+	: white !important;
+	font-size: 1.4em !important;
+}
+
+
+.navbar-brand {
+	color: white !important;
+}
+
+
+
+
+#container{
+  margin-right: auto !important;
+}
+
+
+
+
+
+.imgContainer{
+    float:left;
+}
+
+#image1 {
+	padding-left: 100px;
+	padding-right: 50px;
+}
+
+#image2{
+	padding-right: 50px;
+}
+
+
+#purpose {
+clear: left;
+/*border-style:solid;
+border-color: #3F48CC;*/
+padding-top: 20px;
+/*background-color: #8aabff;
+*/
+} 
+
+#header{
+	font-size: 40px;
+	text-align: center;
+}
+
+#text {
+	text-align: justify;
+}
+#head-image{
+	background-color: #222222;
+	padding-top: 30px;
+	margin-top: -40px;
+}

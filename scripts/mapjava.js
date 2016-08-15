@@ -1,4 +1,5 @@
-var polldata;
+
+    var polldata;
 
     // this is where loop begins
 
@@ -64,10 +65,8 @@ function polls(){
           geocodeAddress(geocoder, map);
         });
 
-      $.ajaxSetup({cache: false})
       $.getJSON('pollingdata.json', function(data){
         polldata = data;
-        $ajaxSetup({cache: true});
         polls();
       });
     }

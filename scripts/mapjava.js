@@ -1,4 +1,11 @@
 
+   function alertbox(){
+    alert("DISCLAIMER: Polling location nearest to you may not be your actual voting location. 
+      Please check your registration form for your assigned location.")
+   }
+
+
+
     var polldata;
 
     // this is where loop begins

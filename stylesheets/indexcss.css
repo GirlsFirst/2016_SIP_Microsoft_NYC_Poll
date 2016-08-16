@@ -24,11 +24,8 @@
 
 
 
+/*
 
-
-/*.imgContainer{
-    float:left;
-}*/
 
 #image1 {
 	padding-left: 100px;
@@ -37,7 +34,7 @@
 
 #image2{
 	padding-right: 50px;
-}
+}*/
 
 
 #purpose {
@@ -53,9 +50,9 @@ padding-top: 20px;
 	font-size: 40px;
 	text-align: center;
 }
-
+/*
 #text {
-	text-align: justify;
+	text-align: justify;*/
 }
 /*#head-image{
 	background-color: #222222;

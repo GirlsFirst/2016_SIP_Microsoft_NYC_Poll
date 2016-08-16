@@ -1,10 +1,8 @@
 
-   function alertbox(){
-    alert("DISCLAIMER: Polling location nearest to you may not be your actual voting location. 
-      Please check your registration form for your assigned location.")
-   }
+    $(document).ready(function(){
 
-
+      alert("DISCLAIMER: Polling locations nearest to you may not be your actual voting locations. Please check your registration form your assigned location. Hit OK to load map.");
+    });
 
     var polldata;
 

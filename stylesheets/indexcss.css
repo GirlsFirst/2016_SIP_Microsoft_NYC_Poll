@@ -24,7 +24,7 @@
 
 
 
-/*
+
 
 
 #image1 {
@@ -34,7 +34,7 @@
 
 #image2{
 	padding-right: 50px;
-}*/
+}
 
 
 #purpose {
@@ -50,12 +50,13 @@ border-color: #3F48CC;*/
 	font-size: 40px;
 	text-align: center;
 }
-/*
+
 #text {
-	text-align: justify;*/
+	text-align: justify;
 }
-/*#head-image{
-	background-color: #222222;
-	padding-top: 30px;
-	margin-top: -40px;
-}*/
+
+#quote {
+	color: black;
+	font-weight: bold;
+	font-size: 15px;
+}
